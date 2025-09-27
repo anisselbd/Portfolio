@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcours — Anisse Lebadi</title>
+  <meta name="description"
+    content="Parcours d’Anisse : 8 ans d'armée, reconversion en développement web (ForEach Academy)." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="projects.html">Projets</a>
+      <a href="about.html" aria-current="page">Parcours</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+
+  <main class="grid" style="max-width:900px">
+    <h1>À propos</h1>
+
+    <section>
+      <p>
+        Je m’appelle <strong>Anisse Lebadi</strong>, développeur web en reconversion après
+        <strong>8 ans dans l’armée</strong>. J’ai démarré en août 2025 un bootcamp intensif
+        <strong>Développeur Web & Web Mobile — ForEach Academy</strong> (jusqu’à avril 2026, avec 2 mois de stage).
+        <br />J’aime concevoir des interfaces propres, des fonctionnalités fiables et des expériences rapides.
+      </p>
+    </section>
+
+    <section>
+      <h2>Compétences</h2>
+      <div class="card__tags" style="margin:10px 0 0"> <!-- liste de compétences / outils -->
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+        <span class="tag">Git & GitHub</span><span class="tag">Figma</span>
+        <span class="tag">Electron (packaging)</span>
+        <span class="tag">Accessibilité</span>
+        <span class="tag">UI / Prototypage</span>
+      </div>
+      <p class="muted" style="color:var(--muted);margin-top:10px"> <!-- note sur les compétences à venir -->
+        Bientôt : React, Node.js, SQL/NoSQL.
+      </p>
+    </section>
+
+    <section>
+      <h2>Projets mis en avant</h2>
+      <div class="cards" id="featured"></div> <!-- conteneur pour les cartes de projets, rempli par JavaScript -->
+      <p class="center" style="margin-top:16px"><a class="btn btn--ghost" href="projects.html">Voir tous les projets</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Parcours</h2>
+      <ul>
+        <li><strong>2025–2026</strong> — Bootcamp ForEach Academy (Dév. Web & Web Mobile).</li>
+        <li><strong>2017–2025</strong> — Armée, fonctions opérationnelles et responsabilités d’équipe.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Objectif</h2>
+      <p>
+        Rechercher un <strong>stage de 2 mois (févr–avril 2026)</strong> en développement web / front-end, pour
+        contribuer
+        à des interfaces concrètes et progresser au contact d’une équipe.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi — <a href="contact.html">Me contacter</a></p>
+  </footer>
+
+  <script src="./scripts/data.js" defer></script>
+  <script src="./scripts/ui.js" defer></script>
+  <script defer> // script pour afficher l'année courante dans le footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // Injecte les projets "featured"
+    (function () {
+      const wrap = document.getElementById("featured");
+      if (!wrap || !window.PROJECTS) return;
+      const list = window.PROJECTS.filter(p => p.featured);
+      wrap.innerHTML = list.map(p => `
+        <article class="card">
+          <a href="${p.url}">
+            <div class="card__cover">${p.cover ? `<img src="${p.cover}" alt="${p.title}">` : p.title}</div>
+          </a>
+          <div class="card__body">
+            <h3 class="card__title">${p.title}</h3>
+            <p class="card__desc">${p.desc}</p>
+            <div class="card__tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+          </div>
+        </article>
+      `).join("");
+    })(); // ce script injecte les projets "featured" en basant sur data.js
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Anisse Lebadi</title>
+  <meta name="description" content="Contactez Anisse Lebadi — développeur web en reconversion (stage fév–mars 2026)." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="projects.html">Projets</a>
+      <a href="about.html">Parcours</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+
+  <main class="grid" style="max-width:800px">
+    <h1>Me contacter</h1>
+    <p>N’hésitez pas à m’écrire pour une opportunité de stage, un projet ou une collaboration.</p>
+
+    <section class="card" style="padding:18px">
+      <div class="card__body">
+        <p><strong>Email :</strong> <a class="accent" href="mailto:anisse.lebadi@sfr.fr">anisse.lebadi@sfr.fr</a></p>
+        <p><strong>GitHub :</strong> <a class="accent" href="https://github.com/anisselbd" target="_blank"
+            rel="noopener">github.com/anisselbd</a></p>
+        <p><strong>LinkedIn :</strong> <a class="accent" href="https://www.linkedin.com/in/anisse-lebadi"
+            target="_blank" rel="noopener">linkedin.com/in/anisse-lebadi</a></p>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <h2>Formulaire rapide</h2>
+      <!-- mailto: simple, fonctionnel et sans back-end pour l'instant -->
+      <form action="mailto:anisse.lebadi@sfr.fr" method="post" enctype="text/plain"
+        style="display:grid;gap:10px;max-width:640px">
+        <label>Votre nom
+          <input name="Nom" required
+            style="width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--card-border);background:var(--card);color:var(--text)">
+        </label>
+        <label>Votre email
+          <input name="Email" type="email" required
+            style="width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--card-border);background:var(--card);color:var(--text)">
+        </label>
+        <label>Message
+          <textarea name="Message" rows="5" required
+            style="width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--card-border);background:var(--card);color:var(--text)"></textarea>
+        </label>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" type="submit">Envoyer</button>
+          <button class="btn btn--ghost" type="reset">Effacer</button>
+        </div>
+        <p class="muted" style="color:var(--muted);font-size:.9rem">
+          <!-- ce message s'affiche en dessous mais uniquement si l'ouverture du client mail échoue -->
+          Astuce : si l’ouverture du client mail ne vous convient pas, contactez-moi directement par email.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi</p>
+  </footer>
+
+  <script src="./scripts/ui.js" defer></script> <!-- script pour l'UI (menu, thème) -->
+  <!-- script pour afficher l'année courante dans le footer -->
+  <script defer>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

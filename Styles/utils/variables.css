@@ -1,0 +1,21 @@
+:root {
+  --bg: #0f1115;
+  /* dark par défaut */
+  --text: #e6e8eb;
+  --muted: #a0a6af;
+  --accent: #7c5cff;
+  --card: #161a22;
+  --card-border: #232838;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f9fc;
+  /* light si data-theme selectioné ="light" */
+  --text: #111318;
+  --muted: #5a6472;
+  --accent: #6b4eff;
+  --card: #ffffff;
+  --card-border: #e7eaf0;
+}

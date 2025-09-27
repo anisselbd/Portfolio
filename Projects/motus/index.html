@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motus — Détails</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  <main class="grid">
+    <h1>Motus</h1>
+    <p>Jeu de lettres inspiré du célèbre jeu télévisé, avec grille dynamique et effets UI.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/Motus.png" alt="Capture Motus"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2>Stack</h2>
+        <ul>
+          <li>HTML/CSS/JavaScript</li>
+          <li>LocalStorage pour les statistiques</li>
+        </ul>
+        <h2>Fonctionnalités</h2>
+        <ul>
+          <li>Grille dynamique 6x5</li>
+          <li>Effets UI et animations</li>
+          <li>Dictionnaire français</li>
+          <li>Statistiques en temps réel</li>
+          <li>Design responsive</li>
+          <li>Accessibilité (navigation clavier)</li>
+        </ul>
+        <h2>Apprentissages</h2>
+        <ul>
+          <li>Manipulation avancée du DOM</li>
+          <li>Algorithmes de comparaison de mots</li>
+          <li>Animations CSS et transitions</li>
+          <li>Gestion des événements clavier</li>
+          <li>Stockage local des données utilisateur</li>
+        </ul>
+        <p style="margin-top: 24px;"><a class="btn" href="https://github.com/anisselbd" target="_blank"
+            rel="noopener">Code sur GitHub</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse</p>
+  </footer>
+  <script src="../../Scripts/ui.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

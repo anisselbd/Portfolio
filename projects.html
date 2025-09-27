@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets — Anisse Lebadi</title>
+  <meta name="description" content="Tous les projets web d'Anisse : To-Do List, Motus, UI Figma et plus." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="projects.html" aria-current="page">Projets</a>
+      <a href="about.html">Parcours</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <h1>Tous les projets</h1>
+    <p class="muted" style="color:var(--muted);margin-top:0">Sélection d’applications et maquettes en cours de
+      formation.</p>
+
+    <!-- Barre de recherche simple -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px">
+      <input id="search" type="search" placeholder="Rechercher (titre, tag…)" aria-label="Rechercher un projet"
+        style="flex:1;min-width:220px;padding:10px 12px;border-radius:12px;border:1px solid var(--card-border);background:var(--card);color:var(--text)" />
+      <button class="btn btn--ghost" id="clear">Effacer</button>
+    </div>
+
+    <div class="cards" id="all-projects"></div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi</p>
+  </footer>
+
+  <script src="./Scripts/data.js" defer></script>
+  <script src="./Scripts/ui.js" defer></script>
+  <script defer>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function render(list) {
+      const container = document.getElementById("all-projects");
+      if (!container) return;
+      container.innerHTML = list.map(p => `
+        <article class="card">
+          <a href="${p.url}">
+            <div class="card__cover">${p.cover ? `<img src="${p.cover}" alt="${p.title}">` : p.title}</div>
+          </a>
+          <div class="card__body">
+            <h3 class="card__title">${p.title}</h3>
+            <p class="card__desc">${p.desc}</p>
+            <div class="card__tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // init - attendre que PROJECTS soit disponible
+    function init() {
+      if (!window.PROJECTS) {
+        setTimeout(init, 50); // Réessayer dans 50ms
+        return;
+      }
+      let all = window.PROJECTS.slice();
+      render(all);
+
+      // Recherche
+      const search = document.getElementById("search");
+      const clear = document.getElementById("clear");
+      function applyFilter() {
+        const q = (search.value || "").trim().toLowerCase();
+        if (!q) return render(all);
+        const filtered = all.filter(p =>
+          p.title.toLowerCase().includes(q) ||
+          p.desc.toLowerCase().includes(q) ||
+          p.tags.join(" ").toLowerCase().includes(q)
+        );
+        render(filtered);
+      }
+      search.addEventListener("input", applyFilter);
+      clear.addEventListener("click", () => { search.value = ""; applyFilter(); search.focus(); });
+    }
+    init();
+  </script>
+</body>
+
+</html>

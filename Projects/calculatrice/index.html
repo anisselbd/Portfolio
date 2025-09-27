@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculatrice — Détails</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  <main class="grid">
+    <h1>Calculatrice</h1>
+    <p>Calculatrice web moderne avec historique des calculs et design responsive.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/Calculatrice.png" alt="Capture Calculatrice"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2>Stack</h2>
+        <ul>
+          <li>HTML/CSS/JavaScript</li>
+          <li>LocalStorage pour l'historique</li>
+        </ul>
+        <h2>Fonctionnalités</h2>
+        <ul>
+          <li>Opérations mathématiques de base</li>
+          <li>Historique des calculs</li>
+          <li>Interface intuitive et responsive</li>
+          <li>Gestion des erreurs</li>
+          <li>Accessibilité (navigation clavier)</li>
+          <li>Thème moderne</li>
+        </ul>
+        <h2>Apprentissages</h2>
+        <ul>
+          <li>Logique de calcul et gestion des opérations</li>
+          <li>Gestion des états d'interface</li>
+          <li>Validation et gestion d'erreurs</li>
+          <li>Stockage local de l'historique</li>
+          <li>Design d'interface utilisateur intuitive</li>
+        </ul>
+        <p style="margin-top: 24px;"><a class="btn" href="https://github.com/anisselbd" target="_blank"
+            rel="noopener">Code sur GitHub</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse</p>
+  </footer>
+  <script src="../../Scripts/ui.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

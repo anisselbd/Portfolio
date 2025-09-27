@@ -1,0 +1,31 @@
+.hero {
+  display: grid;
+  place-items: center;
+  min-height: 56vh;
+  padding: 40px 20px;
+  background:
+    radial-gradient(800px 300px at 20% -10%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%),
+    radial-gradient(600px 220px at 80% -20%, color-mix(in oklab, var(--accent) 18%, transparent), transparent 60%);
+}
+
+.hero__content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero__content h1 {
+  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3rem);
+  margin: 0 0 10px;
+}
+
+.hero__content p {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

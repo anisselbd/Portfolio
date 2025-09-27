@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anisse Lebadi — Portfolio</title>
+  <meta name="description"
+    content="Développeur web full-stack en reconversion. Projets: To-Do List, Motus, UI Figma…" />
+  <!-- description pour SEO -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" /> <!-- icone du site -->
+  <link rel="preload" href="./styles/main.css" as="style" /> <!-- préchargement du CSS pour performance -->
+  <link rel="stylesheet" href="./styles/main.css" /> <!-- feuille de style principale -->
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Anisse<span class="accent">.</span></a> <!-- nom de la marque -->
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <!-- bouton pour ouvrir le menu sur mobile -->
+    <nav class="menu" data-menu> <!-- menu de navigation -->
+      <a href="projects.html">Projets</a>
+      <a href="about.html">Parcours</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+      <!-- bouton pour changer de thème -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Développeur Web <span class="accent">Full-Stack</span> en reconversion</h1>
+        <p>Bootcamp ForEach (2025-2026) • Ex-militaire (8 ans). Je construis des apps web propres et performantes.</p>
+        <div class="hero__cta">
+          <a class="btn" href="projects.html">Voir mes projets</a>
+          <a class="btn btn--ghost" href="contact.html">Me contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid"> <!-- section pour les derniers projets menés -->
+      <h2>Derniers projets</h2>
+      <div class="cards" id="latest-projects"></div>
+      <!-- conteneur pour les cartes de projets, rempli par JavaScript -->
+      <div class="center"> <!-- bouton pour voir tous les projets -->
+        <a class="btn" href="projects.html">Tous les projets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi — <a href="https://github.com/anisselbd" target="_blank"
+        rel="noopener">GitHub</a> • <a href="https://www.linkedin.com/in/anisse-lebadi" target="_blank"
+        rel="noopener">LinkedIn</a></p>
+  </footer>
+
+  <script src="./Scripts/data.js" defer></script>
+  <script src="./Scripts/ui.js" defer></script>
+  <script src="./Scripts/main.js" defer></script>
+</body>
+
+</html>
