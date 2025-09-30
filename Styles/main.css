@@ -28,7 +28,7 @@ h2 {
 }
 
 .grid {
-  padding: 56px 20px;
+  padding: 0px 20px 56px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -59,6 +59,49 @@ h2 {
   border: 1px solid var(--accent);
   box-shadow: none;
 }
+
+.btn--outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--card-border);
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.btn--outline:hover {
+  background: var(--card-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Animation de révélation au scroll */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet de reveal pour les cartes individuelles */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délais pour l'effet de cascade */
+.reveal-card:nth-child(1) { transition-delay: 0.1s; }
+.reveal-card:nth-child(2) { transition-delay: 0.2s; }
+.reveal-card:nth-child(3) { transition-delay: 0.3s; }
 
 /* Traînée de souris */
 .mouse-trail {

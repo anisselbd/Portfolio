@@ -1,7 +1,7 @@
 .hero {
   display: grid;
   place-items: center;
-  min-height: 56vh;
+  min-height: 68vh;
   padding: 40px 20px;
   background:
     radial-gradient(800px 300px at 20% -10%, color-mix(in oklab, var(--accent) 22%, transparent), transparent 60%),
@@ -28,4 +28,42 @@
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero__cta--single {
+  margin-top: 16px;
+}
+
+/* Flèche de scroll animée */
+.scroll-arrow {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow svg {
+  width: 90px;
+  height: 90px;
+  opacity: 0.7;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-arrow:hover svg {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Générer le HTML des cartes de projets
     container.innerHTML = latest.map(project => `
-      <article class="card">
+      <article class="card reveal-card">
         <a href="${project.url}">
           <div class="card__cover">
             ${project.cover ? 
