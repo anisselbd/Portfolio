@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex — Détails</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  
+  <main class="grid">
+    <h1>Pokédex Complet</h1>
+    <p>Pokédex interactif regroupant plus de 3000 Pokémon avec système de filtres avancés, statistiques complètes et cartes TCG.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/pokemonDetails.png" alt="Capture Pokédex"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2 style="margin-top:0">Fonctionnalités</h2>
+        <ul style="line-height:1.8; color:var(--text);">
+          <li><strong>3000+ Pokémon</strong> : Base de données complète de tous les Pokémon</li>
+          <li><strong>Filtres avancés</strong> : Par génération et par jeu vidéo</li>
+          <li><strong>Statistiques complètes</strong> : HP, Attaque, Défense, vitesse, types, etc.</li>
+          <li><strong>Cris des Pokémon</strong> : Sons authentiques récupérés via API</li>
+          <li><strong>Cartes TCG</strong> : Intégration des cartes physiques Pokémon via API dédiée</li>
+          <li><strong>Recherche intelligente</strong> : Système de recherche rapide et précis</li>
+          <li><strong>API REST</strong> : Récupération des données en temps réel</li>
+          <li><strong>Responsive</strong> : Adapté à tous les écrans</li>
+        </ul>
+
+        <h3>Technologies</h3>
+        <div class="card__tags" style="margin:10px 0">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">API REST</span>
+          <span class="tag">Fetch API</span>
+          <span class="tag">PokéAPI</span>
+          <span class="tag">Pokémon TCG API</span>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:40px">
+      <h2>Détails techniques</h2>
+      <p>
+        Ce projet Pokédex est une application web moderne qui exploite la puissance de plusieurs APIs Pokémon pour offrir
+        une expérience complète. L'application récupère les données de <strong>PokéAPI</strong> pour obtenir toutes les
+        statistiques et informations des Pokémon (types, capacités, évolutions, cris authentiques, etc.), et utilise l'<strong>API Pokémon TCG</strong>
+        pour afficher les cartes à collectionner officielles.
+      </p>
+      <p>
+        Le système de filtrage permet de naviguer facilement parmi les différentes générations (de Kanto à Paldea) et
+        de filtrer par jeu vidéo spécifique. La recherche intelligente analyse le nom des Pokémon en temps réel pour
+        des résultats instantanés, même avec des fautes de frappe mineures.
+      </p>
+      <p>
+        L'interface est entièrement responsive et s'adapte aux mobiles, tablettes et ordinateurs. Chaque carte Pokémon
+        affiche visuellement les informations essentielles avec un design moderne et coloré selon les types.
+      </p>
+    </section>
+
+    <section style="margin-top:40px">
+      <h2>Défis relevés</h2>
+      <ul style="line-height:1.8">
+        <li><strong>Performance</strong> : Optimisation du chargement pour gérer 3000+ entrées efficacement</li>
+        <li><strong>APIs multiples</strong> : Gestion de deux APIs différentes avec pagination et rate limiting</li>
+        <li><strong>Recherche</strong> : Implémentation d'un algorithme de recherche intelligent et rapide</li>
+        <li><strong>UX</strong> : Interface fluide avec chargement progressif et feedbacks visuels</li>
+        <li><strong>Data caching</strong> : Mise en cache des résultats pour réduire les appels API</li>
+      </ul>
+    </section>
+
+    <div style="margin-top:40px; text-align:center;">
+      <a class="btn" href="../../projects.html">← Retour aux projets</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Anisse Lebadi. Portfolio développeur web.</p>
+  </footer>
+
+  <script src="../../Scripts/ui.js"></script>
+  <script src="../../Scripts/main.js"></script>
+</body>
+
+</html>

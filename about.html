@@ -39,13 +39,15 @@
       <h2>Compétences</h2>
       <div class="card__tags" style="margin:10px 0 0"> <!-- liste de compétences / outils -->
         <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+        <span class="tag">Node.js</span><span class="tag">SQL</span>
         <span class="tag">Git & GitHub</span><span class="tag">Figma</span>
         <span class="tag">Electron (packaging)</span>
         <span class="tag">Accessibilité</span>
         <span class="tag">UI / Prototypage</span>
+        <span class="tag">API REST</span>
       </div>
       <p class="muted" style="color:var(--muted);margin-top:10px"> <!-- note sur les compétences à venir -->
-        Bientôt : React, Node.js, SQL/NoSQL.
+        Bientôt : React, NoSQL (MongoDB).
       </p>
     </section>
 
@@ -78,15 +80,16 @@
     <p>© <span id="year"></span> Anisse Lebadi — <a href="contact.html">Me contacter</a></p>
   </footer>
 
-  <script src="./Scripts/data.js" defer></script>
+  <script src="./Scripts/data.js"></script>
   <script src="./Scripts/ui.js" defer></script>
-  <script defer> // script pour afficher l'année courante dans le footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-    // Injecte les projets "featured"
-    (function () {
+  <script> // script pour afficher l'année courante dans le footer et projets featured
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      
+      // Injecte les projets "highlight" pour la page À propos
       const wrap = document.getElementById("featured");
       if (!wrap || !window.PROJECTS) return;
-      const list = window.PROJECTS.filter(p => p.featured);
+      const list = window.PROJECTS.filter(p => p.highlight);
       wrap.innerHTML = list.map(p => `
         <article class="card">
           <a href="${p.url}">
@@ -99,7 +102,7 @@
           </div>
         </article>
       `).join("");
-    })(); // ce script injecte les projets "featured" en basant sur data.js
+    });
   </script>
 </body>
 

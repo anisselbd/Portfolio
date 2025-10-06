@@ -7,7 +7,8 @@ window.PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript", "Electron"],
     cover: "./Assets/IMG/MaToDoList.png",
     url: "./Projects/todo-list/index.html",
-    featured: true
+    featured: true,
+    highlight: false  // Affiché sur index mais pas sur about
   },
   {
     slug: "motus",
@@ -16,7 +17,19 @@ window.PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript"],
     cover: "./Assets/IMG/Motus.png",
     url: "./Projects/motus/index.html",
-    featured: true
+    featured: true,
+    highlight: true  // Affiché partout
+  },
+  
+  {
+    slug: "pokedex",
+    title: "Pokédex Complet",
+    desc: "Pokédex interactif avec 3000+ Pokémon, filtres par génération/jeu, stats complètes via API, cris authentiques, cartes physiques TCG, recherche intelligente.",
+    tags: ["HTML", "CSS", "JavaScript", "API REST", "Fetch"],
+    cover: "./Assets/IMG/pokemonDetails.png",
+    url: "./Projects/pokedex/index.html",
+    featured: true,
+    highlight: true  // Affiché partout
   },
   {
     slug: "calculatrice",
@@ -25,6 +38,7 @@ window.PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript"],
     cover: "./Assets/IMG/Calculatrice.png",
     url: "./Projects/calculatrice/index.html",
-    featured: true
+    featured: true,
+    highlight: false  // Affiché sur index mais pas sur about
   }
 ];
