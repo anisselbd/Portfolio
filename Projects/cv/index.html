@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV Interactif — Détails</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  
+  <main class="grid">
+    <h1>CV Interactif</h1>
+    <p>CV web moderne et responsive avec animations, navigation fluide et formulaire de contact intégré via EmailJS.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/CvAnisse.png" alt="Capture CV Interactif"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2 style="margin-top:0">Fonctionnalités</h2>
+        <ul style="line-height:1.8; color:var(--text);">
+          <li><strong>Design Responsive</strong> : Adapté à tous les écrans (mobile, tablette, desktop)</li>
+          <li><strong>Header Animé</strong> : Animations fluides et modernes au chargement</li>
+          <li><strong>Navigation Intelligente</strong> : Boutons de redirection vers sections ciblées</li>
+          <li><strong>Photo Réactive</strong> : Image de profil avec effets interactifs</li>
+          <li><strong>Sections Complètes</strong> : Expérience, Formation, À propos, Profil</li>
+          <li><strong>Formulaire EmailJS</strong> : Envoi d'emails fonctionnel sans backend</li>
+          <li><strong>Design Moderne</strong> : Interface épurée et professionnelle</li>
+          <li><strong>Smooth Scroll</strong> : Navigation fluide entre les sections</li>
+        </ul>
+
+        <h3>Technologies</h3>
+        <div class="card__tags" style="margin:10px 0">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">EmailJS</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Animations</span>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:40px">
+      <h2>Détails techniques</h2>
+      <p>
+        Ce CV interactif est une application web one-page conçue pour offrir une expérience utilisateur moderne et
+        professionnelle. Le <strong>header animé</strong> accueille les visiteurs avec des transitions fluides qui
+        donnent vie à la page dès le premier instant.
+      </p>
+      <p>
+        La navigation est optimisée avec des <strong>boutons de redirection intelligents</strong> qui permettent d'accéder
+        rapidement aux différentes sections du CV : expérience professionnelle, formation académique, profil personnel
+        et section "à propos". Le scroll est fluide et les animations apparaissent progressivement lors de la navigation.
+      </p>
+      <p>
+        L'intégration d'<strong>EmailJS</strong> permet aux recruteurs et contacts professionnels d'envoyer des messages
+        directement depuis le CV, sans nécessiter de serveur backend. Le formulaire est validé en temps réel et affiche
+        des feedbacks visuels clairs à l'utilisateur.
+      </p>
+      <p>
+        La <strong>photo de profil réactive</strong> ajoute une touche d'interactivité avec des effets au survol, rendant
+        l'ensemble plus engageant. Le design entièrement responsive s'adapte parfaitement aux mobiles et tablettes,
+        garantissant une expérience optimale sur tous les appareils.
+      </p>
+    </section>
+
+    <section style="margin-top:40px">
+      <h2>Défis relevés</h2>
+      <ul style="line-height:1.8">
+        <li><strong>Intégration EmailJS</strong> : Configuration et gestion de l'API d'envoi d'emails sans backend</li>
+        <li><strong>Animations CSS</strong> : Création d'animations fluides et performantes sans bibliothèque</li>
+        <li><strong>Navigation Smooth</strong> : Implémentation d'un scroll fluide vers les sections ciblées</li>
+        <li><strong>Responsive Design</strong> : Adaptation parfaite du layout sur tous les formats d'écran</li>
+        <li><strong>Validation Formulaire</strong> : Gestion des erreurs et feedbacks utilisateur en temps réel</li>
+        <li><strong>Performance</strong> : Optimisation du chargement et des animations pour une UX fluide</li>
+      </ul>
+    </section>
+
+    <div style="margin-top:40px; text-align:center; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn--ghost" href="https://github.com/anisselbd/CV" target="_blank" rel="noopener noreferrer">
+        <svg style="width:20px; height:20px; vertical-align:middle; margin-right:8px;" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        Voir sur GitHub
+      </a>
+      <a class="btn" href="https://anisselbd.github.io/CV/" target="_blank" rel="noopener noreferrer">
+        🌐 Voir le CV en ligne
+      </a>
+      <a class="btn" href="../../projects.html">← Retour aux projets</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Anisse Lebadi. Portfolio développeur web.</p>
+  </footer>
+
+  <script src="../../Scripts/ui.js"></script>
+  <script src="../../Scripts/main.js"></script>
+</body>
+
+</html>

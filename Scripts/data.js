@@ -20,7 +20,16 @@ window.PROJECTS = [
     featured: true,
     highlight: true  // Affiché partout
   },
-  
+  {
+    slug: "calculatrice",
+    title: "Calculatrice (Web)",
+    desc: "Calculatrice web avec historique, responsive, accessibilité.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    cover: "./Assets/IMG/Calculatrice.png",
+    url: "./Projects/calculatrice/index.html",
+    featured: true,
+    highlight: false  // Affiché sur index mais pas sur about
+  },
   {
     slug: "pokedex",
     title: "Pokédex Complet",
@@ -32,12 +41,12 @@ window.PROJECTS = [
     highlight: true  // Affiché partout
   },
   {
-    slug: "calculatrice",
-    title: "Calculatrice (Web)",
-    desc: "Calculatrice web avec historique, responsive, accessibilité.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    cover: "./Assets/IMG/Calculatrice.png",
-    url: "./Projects/calculatrice/index.html",
+    slug: "cv",
+    title: "CV Interactif",
+    desc: "CV web responsive avec design moderne, header animé, navigation fluide entre sections, photo réactive et formulaire de contact EmailJS fonctionnel.",
+    tags: ["HTML", "CSS", "JavaScript", "EmailJS", "Responsive"],
+    cover: "./Assets/IMG/CvAnisse.png",
+    url: "./Projects/cv/index.html",
     featured: true,
     highlight: false  // Affiché sur index mais pas sur about
   }
