@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
       brand.appendChild(span);
     });
 
-    const progressContainer = document.createElement('div');
+    const progressContainer = document.createElement('div'); // Conteneur de la barre de progression
     progressContainer.className = 'progress-container';
 
     const progressBar = document.createElement('div');
@@ -190,4 +190,4 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollReveal();
 
 
-});
+}); // Fin de DOMContentLoaded
