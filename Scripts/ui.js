@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function animateTrail() {
-      trailElements.forEach((trail, index) => {
+      trailElements.forEach((trail, index) => { // index 0 est le plus proche de la souris
         const speed = 0.15 - (index * 0.02);
 
         trail.prevX = trail.x;
