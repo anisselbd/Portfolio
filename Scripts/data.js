@@ -49,5 +49,15 @@ window.PROJECTS = [
     url: "./Projects/cv/index.html",
     featured: true,
     highlight: false  // Affiché sur index mais pas sur about
+  },
+  {
+    slug: "league-of-legends",
+    title: "League of Legends Explorer",
+    desc: "Application React pour explorer les champions, objets et régions de LoL avec quiz interactif et tracker de stats (à venir).",
+    tags: ["React", "Vite", "CSS", "React Router", "API REST", "Jest", "Data Dragon"],
+    cover: "./Assets/IMG/Lol1.png",
+    url: "./Projects/league-of-legends/index.html",
+    featured: true,
+    highlight: true  // Affiché partout
   }
 ];

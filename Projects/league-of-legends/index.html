@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>League of Legends Explorer — Détails</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  
+  <main class="grid">
+    <h1>League of Legends Explorer</h1>
+    <p>Une application web pour explorer les champions, objets et régions de League of Legends avec quiz interactif et tracker de statistiques.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/Lol1.png" alt="Capture League of Legends Explorer"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border); margin-bottom:16px;">
+        <img src="../../Assets/IMG/Lol2.png" alt="Champions League of Legends"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border); margin-bottom:16px;">
+        <img src="../../Assets/IMG/Lol3.png" alt="Quiz League of Legends"
+          style="width: 100%; border-radius:14px;border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2 style="margin-top:0">Fonctionnalités</h2>
+        <ul style="line-height:1.8; color:var(--text);">
+          <li><strong>Liste des Champions</strong> : Tous les champions avec détails complets</li>
+          <li><strong>Objets du jeu</strong> : Catalogue complet des items avec stats</li>
+          <li><strong>Régions de Runeterra</strong> : Exploration des différentes régions du lore</li>
+          <li><strong>Quiz interactif</strong> : Testez vos connaissances sur LoL</li>
+          <li><strong>Navigation fluide</strong> : Interface intuitive entre les pages</li>
+          <li><strong>Tracker LoL</strong> : Statistiques de joueurs en temps réel (à venir)</li>
+          <li><strong>API Data Dragon</strong> : Données officielles de Riot Games</li>
+          <li><strong>Responsive</strong> : Adapté à tous les écrans</li>
+        </ul>
+
+        <h3>Technologies</h3>
+        <div class="card__tags" style="margin:10px 0">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">CSS</span>
+          <span class="tag">React Router</span>
+          <span class="tag">API REST</span>
+          <span class="tag">Data Dragon API</span>
+          <span class="tag">Jest</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:40px">
+      <h2>Détails techniques</h2>
+      <p>
+        League of Legends Explorer est une application <strong>React</strong> moderne développée avec <strong>Vite</strong>
+        comme outil de build, offrant des performances optimales et un temps de démarrage ultra-rapide. L'application
+        utilise l'<strong>API Data Dragon de Riot Games</strong> pour fournir des informations exhaustives sur l'univers
+        de League of Legends avec plus de 160 champions, leurs compétences, statistiques et splash arts officiels.
+      </p>
+      <p>
+        L'architecture repose sur <strong>React Router DOM</strong> pour une navigation fluide entre les pages (Champions,
+        Objets, Régions, Quiz). Les hooks React personnalisés comme <strong>useChampions</strong> permettent une gestion
+        d'état efficace et réutilisable. Le catalogue d'objets affiche tous les items du jeu avec leurs effets et statistiques,
+        tandis que la section Régions explore les zones de Runeterra avec leur lore.
+      </p>
+      <p>
+        Le projet est testé avec <strong>Jest</strong> et testing-library pour garantir la fiabilité du code. L'interface
+        utilise du CSS natif pour un design inspiré de l'esthétique League of Legends. Le quiz interactif teste les
+        connaissances des joueurs avec un système de scoring dynamique. La fonctionnalité de tracker permettra prochainement
+        de suivre les statistiques d'un joueur en temps réel.
+      </p>
+    </section>
+
+    <section style="margin-top:40px">
+      <h2>Défis relevés</h2>
+      <ul style="line-height:1.8">
+        <li><strong>Architecture React</strong> : Conception d'une application modulaire avec hooks personnalisés</li>
+        <li><strong>API Data Dragon</strong> : Intégration et parsing des données complexes de Riot Games</li>
+        <li><strong>Performance Vite</strong> : Optimisation du build et du chargement pour 160+ champions</li>
+        <li><strong>React Router</strong> : Navigation fluide multi-pages avec state management efficace</li>
+        <li><strong>Quiz dynamique</strong> : Système de questions/réponses avec scoring et feedback visuel</li>
+        <li><strong>Tests automatisés</strong> : Couverture de tests avec Jest et testing-library</li>
+        <li><strong>Design thématique</strong> : Interface fidèle à l'univers de LoL en CSS natif</li>
+        <li><strong>Préparation API Riot</strong> : Architecture prête pour l'intégration du tracker de stats</li>
+      </ul>
+    </section>
+
+    <section style="margin-top:40px">
+      <h2>À venir</h2>
+      <p>
+        Le projet continue d'évoluer avec l'ajout prévu d'un <strong>tracker LoL</strong> qui permettra de suivre
+        les statistiques d'un joueur en temps réel : classement, historique des parties, champions favoris, taux
+        de victoire, et plus encore grâce à l'API officielle de Riot Games.
+      </p>
+    </section>
+
+    <div style="margin-top:40px; text-align:center; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn--ghost" href="https://github.com/anisselbd/League-of-Legends-Explorer" target="_blank" rel="noopener noreferrer">
+        <svg style="width:20px; height:20px; vertical-align:middle; margin-right:8px;" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        Voir sur GitHub
+      </a>
+      <a class="btn" href="../../projects.html">← Retour aux projets</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi</p>
+  </footer>
+
+  <script src="../../Scripts/ui.js" defer></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
