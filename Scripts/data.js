@@ -1,14 +1,24 @@
 // Déclare des projets ici 
 window.PROJECTS = [
   {
-    slug: "todo-list",
-    title: "To Do List (Electron + Web)",
-    desc: "App locale (MAC OS) et web avec localStorage. Packaging desktop, thème.",
-    tags: ["HTML", "CSS", "JavaScript", "Electron"],
-    cover: "./Assets/IMG/MaToDoList.png",
-    url: "./Projects/todo-list/index.html",
+    slug: "talentglowv2",
+    title: "TalentGlowV2",
+    desc: "Plateforme web moderne pour la gestion et la mise en relation entre marques et talents. Frontend React/TypeScript/Vite/Tailwind, backend Node.js/Express/MongoDB, gestion de campagnes, profils, fichiers et administration.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Multer", "API REST"],
+    cover: "./Assets/IMG/talentglow1.png",
+    url: "./Projects/talentglowv2/index.html",
     featured: true,
-    highlight: false  // Affiché sur index mais pas sur about
+    highlight: true  // Affiché partout
+  },
+  {
+    slug: "league-of-legends",
+    title: "League of Legends Explorer",
+    desc: "Application React pour explorer les champions, objets et régions de LoL avec quiz interactif et tracker de stats (à venir).",
+    tags: ["React", "Vite", "CSS", "React Router", "API REST", "Jest", "Data Dragon"],
+    cover: "./Assets/IMG/Lol1.png",
+    url: "./Projects/league-of-legends/index.html",
+    featured: true,
+    highlight: true  // Affiché partout
   },
   {
     slug: "motus",
@@ -19,16 +29,6 @@ window.PROJECTS = [
     url: "./Projects/motus/index.html",
     featured: true,
     highlight: true  // Affiché partout
-  },
-  {
-    slug: "calculatrice",
-    title: "Calculatrice (Web)",
-    desc: "Calculatrice web avec historique, responsive, accessibilité.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    cover: "./Assets/IMG/Calculatrice.png",
-    url: "./Projects/calculatrice/index.html",
-    featured: true,
-    highlight: false  // Affiché sur index mais pas sur about
   },
   {
     slug: "pokedex",
@@ -51,13 +51,24 @@ window.PROJECTS = [
     highlight: false  // Affiché sur index mais pas sur about
   },
   {
-    slug: "league-of-legends",
-    title: "League of Legends Explorer",
-    desc: "Application React pour explorer les champions, objets et régions de LoL avec quiz interactif et tracker de stats (à venir).",
-    tags: ["React", "Vite", "CSS", "React Router", "API REST", "Jest", "Data Dragon"],
-    cover: "./Assets/IMG/Lol1.png",
-    url: "./Projects/league-of-legends/index.html",
+    slug: "todo-list",
+    title: "To Do List (Electron + Web)",
+    desc: "App locale (MAC OS) et web avec localStorage. Packaging desktop, thème.",
+    tags: ["HTML", "CSS", "JavaScript", "Electron"],
+    cover: "./Assets/IMG/MaToDoList.png",
+    url: "./Projects/todo-list/index.html",
     featured: true,
-    highlight: true  // Affiché partout
+    highlight: false  // Affiché sur index mais pas sur about
+  },
+  {
+    slug: "calculatrice",
+    title: "Calculatrice (Web)",
+    desc: "Calculatrice web avec historique, responsive, accessibilité.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    cover: "./Assets/IMG/Calculatrice.png",
+    url: "./Projects/calculatrice/index.html",
+    featured: true,
+    highlight: false  // Affiché sur index mais pas sur about
   }
-];
+]
+;
