@@ -152,34 +152,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 🎭 Effet de révélation au scroll
   function initScrollReveal() {
-    const observerOptions = {
-      threshold: 0.3, // L'élément doit être 30% visible pour déclencher
-      rootMargin: '0px 0px -100px 0px' // Déclenche quand l'élément est à 100px du bas de l'écran
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Petit délai avant de commencer l'animation pour s'assurer que l'utilisateur scrolle intentionnellement
-          setTimeout(() => {
-            entry.target.classList.add('revealed');
-
-            // Pour les cartes, révéler également les enfants avec délai
-            const cards = entry.target.querySelectorAll('.card');
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add('reveal-card', 'revealed');
-              }, index * 150); // 150ms de délai entre chaque carte
-            });
-          }, 100); // 100ms de délai initial
-        }
+    // Désactiver le reveal sur mobile (<=600px)
+    if (window.innerWidth > 600) {
+      const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('revealed');
+              const cards = entry.target.querySelectorAll('.card');
+              cards.forEach((card, index) => {
+                setTimeout(() => {
+                  card.classList.add('reveal-card', 'revealed');
+                }, index * 150);
+              });
+            }, 100);
+          }
+        });
+      }, observerOptions);
+      document.querySelectorAll('.reveal-section').forEach(section => {
+        observer.observe(section);
       });
-    }, observerOptions);
-
-    // Observer toutes les sections avec la classe reveal-section
-    document.querySelectorAll('.reveal-section').forEach(section => {
-      observer.observe(section);
-    });
+    }
   }
 
   //  Initialisation de tous les modules

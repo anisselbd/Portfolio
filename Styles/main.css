@@ -75,6 +75,7 @@ h2 {
 }
 
 /* Animation de révélation au scroll */
+
 .reveal-section {
   opacity: 0;
   transform: translateY(60px);
@@ -84,6 +85,36 @@ h2 {
 .reveal-section.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .reveal-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  body .page-loader ~ main .reveal-section,
+  body .page-loader ~ main .reveal-card {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  body .page-loader {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background: var(--bg);
+  }
+  body.page-loader-active {
+    overflow: hidden !important;
+  }
 }
 
 /* Effet de reveal pour les cartes individuelles */
