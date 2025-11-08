@@ -5,7 +5,7 @@ window.PROJECTS = [
     title: "TalentGlowV2",
     desc: "Plateforme web moderne pour la gestion et la mise en relation entre marques et talents. Frontend React/TypeScript/Vite/Tailwind, backend Node.js/Express/MongoDB, gestion de campagnes, profils, fichiers et administration.",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Multer", "API REST"],
-  cover: "Assets/IMG/TalentGlow1.png",
+  cover: "./Assets/IMG/TalentGlow1.png",
     url: "./Projects/talentglowv2/index.html",
     featured: true,
     highlight: true  // Affiché partout
