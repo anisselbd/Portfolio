@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataDico — Documentation de schémas de base de données</title>
+  <link rel="stylesheet" href="../../Styles/main.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../../index.html">Anisse<span class="accent">.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-toggle="menu">☰</button>
+    <nav class="menu" data-menu>
+      <a href="../../projects.html">Projets</a>
+      <a href="../../about.html">Parcours</a>
+      <a href="../../contact.html">Contact</a>
+      <button class="theme-toggle" data-toggle="theme" aria-label="Changer de thème">🌓</button>
+    </nav>
+  </header>
+  <main class="grid">
+    <h1>DataDico</h1>
+    <p>Application SaaS moderne pour <strong>documenter vos schémas de base de données</strong> de A à Z. Créez, partagez et exportez vos dictionnaires de données en quelques clics.</p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin: 24px 0;">
+      <div>
+        <img src="../../Assets/IMG/Datadico1.png" alt="Page d'accueil DataDico" style="width: 100%; border-radius:14px; border:1px solid var(--card-border); margin-bottom:16px;">
+        <img src="../../Assets/IMG/Datadico3.png" alt="Dashboard DataDico - Gestion des projets" style="width: 100%; border-radius:14px; border:1px solid var(--card-border); margin-bottom:16px;">
+        <img src="../../Assets/IMG/Datadico2.png" alt="Éditeur de schéma DataDico" style="width: 100%; border-radius:14px; border:1px solid var(--card-border);">
+      </div>
+      <div>
+        <h2 style="margin-top:0">Fonctionnalités principales</h2>
+        <ul style="line-height:1.8; color:var(--text);">
+          <li>Création de dictionnaires de données complets</li>
+          <li>Schémas visuels pour visualiser vos structures</li>
+          <li>Gestion des entités et des champs avec types, attributs et descriptions</li>
+          <li>Export multi-format : Markdown et PDF</li>
+          <li>Partage facile avec votre équipe</li>
+          <li>Dashboard intuitif pour gérer tous vos projets</li>
+          <li>Authentification sécurisée des utilisateurs</li>
+          <li>Interface responsive et moderne</li>
+        </ul>
+        <h3>Stack technique</h3>
+        <div class="card__tags" style="margin:10px 0">
+          <span class="tag">Next.js</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">NestJS</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Prisma</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">API REST</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Railway</span>
+        </div>
+      </div>
+    </div>
+    
+    <section style="margin-top:40px">
+      <h2>Architecture</h2>
+      <p>
+        DataDico est une application <strong>full-stack</strong> avec un <strong>frontend</strong> Next.js déployé sur Vercel et un <strong>backend</strong> NestJS hébergé sur Railway. La base de données PostgreSQL stocke les projets, entités et champs. L'ORM Prisma assure une gestion type-safe des données. L'application utilise des pratiques SEO modernes avec Open Graph et Twitter Cards pour un partage optimal sur les réseaux sociaux.
+      </p>
+    </section>
+    
+    <section style="margin-top:40px">
+      <h2>Défis et points forts</h2>
+      <ul style="line-height:1.8">
+        <li>Interface UX intuitive pour la documentation technique</li>
+        <li>Génération automatique de documentation en Markdown/PDF</li>
+        <li>Gestion des relations entre entités</li>
+        <li>Optimisation SEO avec métadonnées Open Graph</li>
+        <li>Déploiement CI/CD automatisé (Vercel + Railway)</li>
+        <li>API REST robuste avec validation des données</li>
+      </ul>
+    </section>
+    
+    <div style="margin-top:40px; text-align:center; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn" href="https://datadico.com" target="_blank" rel="noopener noreferrer">
+        🌐 Voir le site en ligne
+      </a>
+      <a class="btn btn--ghost" href="https://github.com/anisselbd" target="_blank" rel="noopener noreferrer">
+        <svg style="width:20px; height:20px; vertical-align:middle; margin-right:8px;" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        Voir sur GitHub
+      </a>
+      <a class="btn btn--ghost" href="../../projects.html">← Retour aux projets</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>© <span id="year"></span> Anisse Lebadi</p>
+  </footer>
+  <script src="../../Scripts/ui.js" defer></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

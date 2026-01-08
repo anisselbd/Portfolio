@@ -1,6 +1,17 @@
 // Déclare des projets ici 
 window.PROJECTS = [
   {
+    slug: "datadico",
+    title: "DataDico",
+    desc: "Application SaaS pour documenter vos schémas de base de données. Créez des dictionnaires de données, partagez-les avec votre équipe et exportez-les en Markdown ou PDF.",
+    tags: ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Prisma", "Tailwind CSS", "Vercel", "Railway"],
+    cover: "./Assets/IMG/Datadico1.png",
+    url: "./Projects/Datadico.com/index.html",
+    liveUrl: "https://datadico.com",
+    featured: true,
+    highlight: true  // Affiché partout - projet en production
+  },
+  {
     slug: "talentglowv2",
     title: "TalentGlowV2",
     desc: "Plateforme web moderne pour la gestion et la mise en relation entre marques et talents. Frontend React/TypeScript/Vite/Tailwind, backend Node.js/Express/MongoDB, gestion de campagnes, profils, fichiers et administration.",
@@ -71,4 +82,4 @@ window.PROJECTS = [
     highlight: false  // Affiché sur index mais pas sur about
   }
 ]
-;
+  ;
