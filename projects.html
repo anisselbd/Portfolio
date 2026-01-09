@@ -27,7 +27,6 @@
     <p class="muted" style="color:var(--muted);margin-top:0">Sélection d’applications et maquettes en cours de
       formation.</p>
 
-    <!-- Barre de recherche simple -->
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 20px">
       <input id="search" type="search" placeholder="Rechercher (titre, tag…)" aria-label="Rechercher un projet"
         style="flex:1;min-width:220px;padding:10px 12px;border-radius:12px;border:1px solid var(--card-border);background:var(--card);color:var(--text)" />
@@ -63,16 +62,14 @@
       `).join("");
     }
 
-    // init - attendre que PROJECTS soit disponible
     function init() {
       if (!window.PROJECTS) {
-        setTimeout(init, 50); // Réessayer dans 50ms
+        setTimeout(init, 50); 
         return;
       }
       let all = window.PROJECTS.slice();
       render(all);
 
-      // Recherche
       const search = document.getElementById("search");
       const clear = document.getElementById("clear");
       function applyFilter() {

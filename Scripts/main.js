@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  //  Année dynamique dans le footer
   function initDynamicYear() {
     const yearElement = document.getElementById("year");
     if (yearElement) {
@@ -8,19 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  //  Injection des projets "featured" sur la page d'accueil
+  // Injection des projets "featured" sur la page d'accueil
   function renderLatestProjects() {
     const container = document.getElementById("latest-projects");
     
-    // Vérifier que le conteneur existe et que les données sont disponibles
     if (!container || !window.PROJECTS) {
       return;
     }
     
-    // Filtrer les projets featured et limiter à 6
     const latest = window.PROJECTS.filter(p => p.featured).slice(0, 6);
     
-    // Générer le HTML des cartes de projets
     container.innerHTML = latest.map(project => `
       <article class="card reveal-card">
         <a href="${project.url}">
@@ -42,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `).join("");
   }
 
-  // Initialisation de tous les modules
   initDynamicYear();
   renderLatestProjects();
 

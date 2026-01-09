@@ -1,7 +1,6 @@
-// Tout encapsulé dans DOMContentLoaded pour une exécution sûre
 document.addEventListener('DOMContentLoaded', function () {
 
-  //  Menu mobile
+  //  Menu pour mobile
   function initMobileMenu() {
     document.addEventListener("click", (e) => {
       const btn = e.target.closest("[data-toggle='menu']");
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 🌓 Thème (dark/light)
+  // Thème (dark/light)
   function initTheme() {
     const root = document.documentElement;
     const saved = localStorage.getItem("theme");
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  //  Effet de traînée qui suit la souris
+  //  Effet de traînée qui suit la souris (mouse trail)
   function initMouseTrail() {
     const trailElements = [];
     for (let i = 0; i < 6; i++) {
@@ -90,17 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  //  Loader de page personnalisé (Anisse.) - seulement sur la page d'accueil
+  //  Loader de page perso (Anisse.) au demarrage du portfolio lorsque l'user clique sur la page d'accueil
   function initPageLoader() {
     const currentPath = window.location.pathname;
     const pageTitle = document.title;
 
-    // Vérifier si on est sur la page d'accueil générale
     const isMainHomePage = pageTitle === 'Anisse Lebadi — Portfolio' &&
       !currentPath.includes('/Projects/');
 
     if (!isMainHomePage) {
-      return; // Ne pas afficher le loader si ce n'est pas la page d'accueil
+      return; // Ne pas afficher le loader perso si ce n'est pas la page d'accueil
     }
 
     // Créer le loader
@@ -150,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000); // 2 secondes (lettres + barre + délai)
   }
 
-  // 🎭 Effet de révélation au scroll
+  // Effet de révélation des cards au scroll
   function initScrollReveal() {
     // Désactiver le reveal sur mobile (<=600px)
     if (window.innerWidth > 600) {
@@ -179,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  //  Initialisation de tous les modules
+  // Initialisation de tous les modules
   initMobileMenu();
   initTheme();
   initMouseTrail();
@@ -187,4 +185,4 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollReveal();
 
 
-}); // Fin de DOMContentLoaded
+}); 

@@ -84,11 +84,10 @@
 
   <script src="./Scripts/data.js"></script>
   <script src="./Scripts/ui.js" defer></script>
-  <script> // script pour afficher l'année courante dans le footer et projets featured
+  <script> 
     document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("year").textContent = new Date().getFullYear();
       
-      // Injecte les projets "highlight" pour la page À propos
       const wrap = document.getElementById("featured");
       if (!wrap || !window.PROJECTS) return;
       const list = window.PROJECTS.filter(p => p.highlight);

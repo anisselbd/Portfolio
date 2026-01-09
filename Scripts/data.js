@@ -1,4 +1,3 @@
-// Déclare des projets ici 
 window.PROJECTS = [
   {
     slug: "datadico",
@@ -9,7 +8,7 @@ window.PROJECTS = [
     url: "./Projects/Datadico.com/index.html",
     liveUrl: "https://datadico.com",
     featured: true,
-    highlight: true  // Affiché partout - projet en production
+    highlight: true 
   },
   {
     slug: "talentglowv2",
@@ -19,7 +18,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/TalentGlow1.png",
     url: "./Projects/talentglowv2/index.html",
     featured: true,
-    highlight: true  // Affiché partout
+    highlight: true 
   },
   {
     slug: "league-of-legends",
@@ -29,7 +28,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/Lol1.png",
     url: "./Projects/league-of-legends/index.html",
     featured: true,
-    highlight: true  // Affiché partout
+    highlight: true 
   },
   {
     slug: "motus",
@@ -39,7 +38,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/Motus.png",
     url: "./Projects/motus/index.html",
     featured: true,
-    highlight: true  // Affiché partout
+    highlight: true 
   },
   {
     slug: "pokedex",
@@ -49,7 +48,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/pokemonDetails.png",
     url: "./Projects/pokedex/index.html",
     featured: true,
-    highlight: true  // Affiché partout
+    highlight: true 
   },
   {
     slug: "cv",
@@ -59,7 +58,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/CvAnisse.png",
     url: "./Projects/cv/index.html",
     featured: true,
-    highlight: false  // Affiché sur index mais pas sur about
+    highlight: false 
   },
   {
     slug: "todo-list",
@@ -69,7 +68,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/MaToDoList.png",
     url: "./Projects/todo-list/index.html",
     featured: true,
-    highlight: false  // Affiché sur index mais pas sur about
+    highlight: false 
   },
   {
     slug: "calculatrice",
@@ -79,7 +78,7 @@ window.PROJECTS = [
     cover: "./Assets/IMG/Calculatrice.png",
     url: "./Projects/calculatrice/index.html",
     featured: true,
-    highlight: false  // Affiché sur index mais pas sur about
+    highlight: false 
   }
 ]
   ;

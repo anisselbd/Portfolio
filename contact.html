@@ -58,7 +58,6 @@
           <button class="btn btn--ghost" type="reset">Effacer</button>
         </div>
         <p class="muted" style="color:var(--muted);font-size:.9rem">
-          <!-- ce message s'affiche en dessous mais uniquement si l'ouverture du client mail échoue -->
           Astuce : si l’ouverture du client mail ne vous convient pas, contactez-moi directement par email.
         </p>
       </form>
@@ -69,8 +68,7 @@
     <p>© <span id="year"></span> Anisse Lebadi</p>
   </footer>
 
-  <script src="./Scripts/ui.js" defer></script> <!-- script pour l'UI (menu, thème) -->
-  <!-- script pour afficher l'année courante dans le footer -->
+  <script src="./Scripts/ui.js" defer></script> 
   <script defer>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 
